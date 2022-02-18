@@ -3,6 +3,9 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$versions.springBoot")
     }
 }
+//unique dependencies for module
 dependencies {
+    implementation libs.postgresql
+    implementation libs.springDataJpa
 
 }
