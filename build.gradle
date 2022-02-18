@@ -35,5 +35,13 @@ allprojects {
             mavenCentral()
         }
     }
-
+    dependencies {
+        implementation  libs.springBootWeb
+        implementation  libs.lombok
+    }
+}
+configurations {
+    compileOnly{
+        extendsFrom annotationProcessor
+    }
 }
