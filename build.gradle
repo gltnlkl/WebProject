@@ -1,17 +1,26 @@
 plugins {
     id 'java'
-    id 'maven'
 
 }
 
 allprojects {
     apply plugin : 'eclipse'
-    apply plugin : 'maven'
     apply plugin : 'idea'
     apply from : "${rootDir}/dependencies.gradle"
 
 }
 
+subprojects {
+    apply plugin : 'java'
+    group = "com.gulukal"
+    version = "v.1.0.0"
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+}
 
 
 
